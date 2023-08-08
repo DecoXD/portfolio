@@ -1,0 +1,145 @@
+.about{
+grid-gap: var(--global-spacement);
+min-height: calc(100vh - 15.6rem);
+padding: 1.2rem;
+
+}
+
+
+
+.personalInfo{
+/* border: 5px solid red; */
+display: flex;
+flex-direction: column;
+gap: var(--global-spacement);
+grid-area: info;
+padding: var(--global-spacement);
+
+}
+
+.imageContainer{
+display: flex;
+align-items: center;
+gap: 2rem;
+}
+
+.imageBox{
+max-width: 10rem;
+border-radius: 50px;
+}
+
+.image{
+border-radius: 20px;
+}
+
+.details{
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+
+.obj{
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+}
+
+.contacts{
+    display:flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.contacts p {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.codeLangs{
+/* border: 2px solid green; */
+grid-area: langs;
+padding: var(--global-spacement);
+}
+
+.skillList{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 2rem;
+}
+
+
+
+
+.lang{
+    
+    box-shadow: 0px 0px 0px 5px #f0f0f0;
+    padding: .5rem;
+    width:  clamp(7rem , 10vw, 10rem );
+    min-height: clamp(7rem , 10vw, 10rem );
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang:hover{
+transform: scale(1.02);
+}
+
+.skillImage{
+    object-fit: contain;
+}
+
+.personalSkills {
+/* border: 5px solid yellow; */
+grid-area: pSkill;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+padding: var(--global-spacement);
+
+}
+
+.list{
+    columns: 2;
+   display: grid;
+   
+   grid-gap: 1.2rem;
+}
+
+.listItem {
+   max-width: 300px;
+   background-color: #f0f0f0;
+   border-radius: 20px;
+
+}
+
+.progress{
+    padding: 2px;
+    min-width: 15rem;
+    display: block;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    color: #f2f2f2;
+    border-radius: 20px;
+    background-color: #00aeff;
+    padding-left: .5rem ;
+
+
+
+}
+
+@media(min-width:768px){
+.about{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-areas:
+'info  langs  langs '
+'info  pSkill pSkill'
+'info  .      .     ';
+}
+.list{
+    grid-template-columns: 1fr 1fr;
+}
+}

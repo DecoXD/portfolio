@@ -1,0 +1,181 @@
+.homeSection{
+    display: flex;
+    min-height: calc(100vh - 15.6rem);
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.apresentationContainer{
+
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 2rem;
+align-self: start; 
+margin-inline: auto;
+
+}
+
+
+.myImage{
+max-width: 20rem;
+margin-inline: auto;
+position: relative;
+
+}
+
+.myImageContainer{
+
+    aspect-ratio: 1 / 1.3;
+    display: grid;
+    align-items: flex-end;
+    border-radius:0px 0px 100px 100px;
+    overflow: hidden;
+}
+.apresentationContainer:hover .myImageFace{
+
+    transform: translateY(-10px) scale(1.10);
+}
+.images{
+max-width: 100%;
+display: block;
+}
+
+.myImageCircle{
+    position: absolute;
+    inset: auto 0 0 ;
+    width: 22rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-inline: auto;
+    object-fit: cover;
+   
+}
+
+.myImageFace{
+    position: relative;
+    z-index: 2;
+    transition: transform .5s;
+}
+
+
+.apresentationNameContainer{
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    padding: 20px 0;
+    line-height: 1.5;
+    max-width: 50rem;
+    
+}
+
+.typingTextName{
+    display: block;
+    font-size: clamp(1.4rem, .8rem + .5vw, 2rem);
+    padding: 0;
+    width: 100% ;
+    max-width: 48rem;
+    animation: typingText 2s steps(27)  forwards,deleteText 2s steps(27) 2s forwards,typingText 2s steps(27) 4s forwards;
+    font-family: var(--monospace);
+    overflow: hidden;
+
+}
+
+
+.apresentationName{
+
+    white-space:nowrap ;
+    animation:blink-on .9s cubic-bezier(1,-0.25, 0.5, 1.32) 7 ;
+    border: 1px solid transparent;
+
+}
+
+.nameAnimation{
+    border-right:1px solid transparent ;
+    padding: 6px;
+    font-size: clamp(1.4rem, 1.6rem + 1vw, 3rem);
+
+
+}
+
+.typingTextOccupation{
+    animation: typingText 1.5s steps(38) 6.5s  forwards ;
+    display: block;
+    font-size: 2rem;
+    width: 100% ;
+    font-family: var(--monospace);
+    overflow: hidden;
+    padding: 0 1rem;
+    }
+
+.apresentationOccupation{
+    animation:blink-on .9s cubic-bezier(1,-0.25, 0.5, 1.32) 6.5s infinite ;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    width: clamp(28rem , 150px + 30vw, 100%);
+    margin-bottom: 30px;
+
+
+}
+.toAboutBtn{
+    background-color: #0D33FF;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-family: var(--global-fonts);
+    padding:12px 22px  ;
+    max-width: 12rem;
+    margin-inline: auto;
+
+}
+
+.toAboutBtn:hover{
+    transform: scale(1.02);
+    background-color: #0d31ffce;
+}
+
+
+@keyframes blink-on{
+to{
+    border-right-color: black ;
+
+}
+
+
+}
+
+@keyframes typingText{
+0%{
+    width: 0;
+}
+100%{
+    width: 100%;
+    max-width: 50rem;
+}
+}
+
+@keyframes  deleteText{
+0%{
+    width: 100%;
+    max-width: 50rem;
+}
+100%{
+width: 0%;
+}
+}
+
+@media (max-width:768px){
+html{
+font-size: 60%;
+}
+.apresentationContainer{
+    flex-direction: column;
+}
+}

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::before::after{
+  box-sizing: border-box;
+}
+:root{
+  --global-fonts: "Montserrat";
+  --monospace: "Source Code Pro";
+  --global-spacement: 1.2rem
+
+
+
+}
+
+html{
+  font-size: 62.5%;
+
+}
+body{
+  font-family:var(--global-fonts) ;
+  font-size: 1.6rem;
+  min-height: 100vh;
+
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+li{
+  list-style: none;
+}
+img{
+  max-width: 100%;
+}
+.active{
+  animation: poing .2s cubic-bezier(0.38, 1.99, 1, 1.38);
+  color: #fff;
+  background-color: #00aeff;
+  position: relative;
+ }
+
+
+
+ .active::before{
+  content: '';
+  display: none;
+  height: 15px;
+  width: 15px;
+  position:absolute;
+  top: -15px;
+  border-radius: 50%;
+  box-shadow: 8px 8px #00aeff;
+  right: 0px;
+  
+
+}
+
+.active::after{
+  content: '';
+  display: none;
+  height: 15px;
+  width: 15px;
+  position:absolute;
+  bottom: -15px;
+  right: 0px;
+  border-radius: 50%;
+  box-shadow: 13px -14px 0px 9px #00aeff;
+  
+
+}
+
+@media(max-width:768px){
+  .active::before,.active::after{
+    display: block;
+  }
+   }
+
+
+.d-none{
+  display: none;
+ }
+ 
+.f-medium{
+  font-size: 2rem;
+}
+.f-small{
+  font-size: 1.4rem;
+}
+.bold{
+  font-weight: bold;
+}
+
+.title-blue{
+  position: relative;
+  display: flex;
+
+/* border: 2px solid */
+}
+.title-blue::before{
+  content: '';
+  height: 100%;
+  width: 3px;
+  background-color: #00aeff;
+  display: block;
+  position: absolute;
+  left: 80px;
+
+}
+
+.icon-blue{
+  color: #0C68E8;
+}
+
+
+.lowOpacity{
+  opacity: .8;
+}
+.neon{
+  position: relative;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.459);
+  cursor: pointer;
+}
+
+@keyframes poing{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.05);
+ 
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+
